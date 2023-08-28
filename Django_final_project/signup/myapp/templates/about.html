@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <style>
+  body{
+    background-color:#d87e7a;
+    font-family:Arial,sans-serif;
+  }
+h1{
+color:white;
+text-align:center;
+border:2px solid black;
+background:black;
+}
+  p{
+text-align:center;
+}
+p4{
+ color:red;
+}
+ .navdiv{
+        border:1px solid black;
+        background-color:black;
+        font-family:calibri;
+        padding-right:100px;
+        padding-left:60px;
+        }
+  .navdiv{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        }
+        .logo a{
+        font-size:35px;
+        font-weight:600;
+        color:white;
+        }
+        li{
+        list-style:none;
+        display:inline-block;
+        }
+        li a{
+        color:white;
+        font-size:18px;
+        font-weight:bold;
+        margin-right:25px;
+        }
+        nav ul li a:hover{
+        background-color:#F09783;
+        box-shadow:0px 0px 25px #F09783,0px 0px 25px #F09783, 0px 0px 25px #F09783;
+        }
+        li a{
+        background-color:black;
+        margin-left:50px;
+        border-radius:50px;
+        padding:10px;
+        width:100px;
+        }
+        li a{
+        color:white;
+        font-weight:bold;
+        font-size:15px;
+        }
+  </style>
+</head>
+<body>
+    <legend align="center"></legend>
+  </fieldset
+  <form>
+<nav class="navbar">
+    <div class="navdiv">
+        <img src="{%static "images/quas.jpg" %}"alt="" width="100px" height="50px">
+    <div class="logo"><a href="#">QuasTech</a></div>
+   <ul>
+     <li><a href="{% url 'home' %}">HOME</a></li>
+     <li><a href="{% url 'about' %}">ABOUT</a></li>
+     <li><a href="{% url 'contact' %}">CONTACT</a></li>
+     <li><a href="{% url 'login' %}">LOGIN</a></li>
+     <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+         {% csrf_token %}
+
+ {{form.as_p}}
+    </ul>
+    </div>
+    </nav>
+
+  </form>
+  <h1>
+    ABOUT US!
+  </h1>
+    <p><u>
+      When Climbing The Career Ladder Choose Quastech
+    </u>
+    </p>
+
+      <p><b>Quastech (Future Through Innovations)</b></p>
+  established by Mrs. Navdeep Kaur with the motive “To Provide excellent & smart working professional to IT industry” Candidate who have excellent command on Software Technology.
+
+    <p><b>Quastech</b></p>
+    <p><br>conducts unique and professional training for graduates and post graduates, we are specialized in real time industry training with the added advantage of domain knowledge. We believe in well organized, Systematized and Standardized training.</p>
+    <p><b><br>SPECIALITY</b></p>
+    <p><br>Specialized and certified Faculty for each courses. Training is 100% based on current industry requirements and real time project. Apart from technical knowledge Quastech believe in the overall growth of the candidates.</p>
+
+</body>
+</html>

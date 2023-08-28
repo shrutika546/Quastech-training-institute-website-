@@ -1,0 +1,108 @@
+<!doctype html>
+
+{% load static %}
+<html lang="en">
+<head>
+  <style>
+  body{
+    background-color: #d87e7a ;
+    font-family:Arial,sans-serif;
+  }
+h1{
+
+color:white;
+text-align:center;
+border:2px solid black;
+background:black;
+}
+p{
+  padding-left: 25px;
+border:1px solid black;
+}
+ .navdiv{
+        border:1px solid black;
+        background-color:black;
+        font-family:calibri;
+        padding-right:100px;
+        padding-left:60px;
+        }
+  .navdiv{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        }
+        .logo a{
+        font-size:35px;
+        font-weight:600;
+        color:white;
+        }
+        li{
+        list-style:none;
+        display:inline-block;
+        }
+        li a{
+        color:white;
+        font-size:18px;
+        font-weight:bold;
+        margin-right:25px;
+        }
+        nav ul li a:hover{
+        background-color:#F09783;
+        box-shadow:0px 0px 25px #F09783,0px 0px 25px #F09783, 0px 0px 25px #F09783;
+        }
+        li a{
+        background-color:black;
+        margin-left:50px;
+        border-radius:50px;
+        padding:10px;
+        width:100px;
+        }
+        li a{
+        color:white;
+        font-weight:bold;
+        font-size:15px;
+        }
+  </style>
+</head>
+<body>	<!--Contact form-->
+ <nav class="navbar">
+    <div class="navdiv">
+        <img src="{%static "images/quas.jpg" %}"alt="" width="100px" height="50px">
+    <div class="logo"><a href="#">QuasTech</a></div>
+
+ <ul>
+     <li><a href="{% url 'home' %}">HOME</a></li>
+     <li><a href="{% url 'about' %}">ABOUT</a></li>
+     <li><a href="{% url 'contact' %}">CONTACT</a></li>
+     <li><a href="{% url 'login' %}">LOGIN</a></li>
+     <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+         {% csrf_token %}
+
+ {{form.as_p}}
+    </ul>
+    </div>
+    </nav>
+	<div style="margin:80px">
+		<h1>Contact Us</h1>
+		<h2>Campus</h2>
+		<p>
+		201, Anant Laxmi Chambers, Dada Patil Marg Opp. Waman Hari Pethe Jewllers, Thane, Maharashtra 400602.
+<br>
+			<br>
+			        <img src="{%static "images/contact.png" %}"alt="" width="20px" height="20px">
+			contact me: 022 54534567
+		</p>
+
+				<h2>Email</h2>
+			       <p> <img src="{%static "images/gmail.png" %}"alt="" width="18px" height="18px">
+			quastech@gmail.com
+		</p>
+		<form method="post">
+        {% csrf_token %}
+            {{form.as_p}}
+
+        </form>
+
+    </div>
+</body>
+</html>

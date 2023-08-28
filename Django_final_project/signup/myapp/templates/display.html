@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+      body{
+    background-color:   #cd7e50  ;
+    font-family:Arial,sans-serif;
+  }
+    <meta charset="UTF-8">
+    <title>Title</title>
+      </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th> ID</th>
+        <th> USERNAME</th>
+        <th> EMAIL</th>
+        <th> PASSWORD1</th>
+        <th> PASSWORD2</th>
+        <th>ACTION</th>
+    </tr>
+    {% for i in res %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.username}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.password1}}</td>
+        <td>{{i.password2}}</td>
+        <td> <a href="/edit/{{i.id}}">edit</a>
+        <a href="/delete/{{i.id}}"> delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<form action="saveform">
+    <button type="submit">home</button>
+</form>
+</body>
+</html>

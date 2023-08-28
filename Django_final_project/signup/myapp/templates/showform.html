@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+             body{
+    background-color:   #cd7e50 ;
+    font-family:Arial,sans-serif;
+  }
+  h1{
+color:white;
+text-align:center;
+border:2px solid black;
+background:black;
+}
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>
+    USER INFORMATION
+  </h1><CENTER>
+<form action="saveform" method="post">
+    {% csrf_token %}
+{{form.as_p}}
+<button type="submit">save</button>
+
+<form action="display">
+    <button type="submit">show</button>
+  </CENTER>
+</form>
+</body>
+</html>
